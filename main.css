@@ -59,3 +59,20 @@ a:hover{ /*鼠标移动到点击位时的样式，active指点击过后的样式
     text-align: center;
     margin-top: 30px;
 }
+@media screen and (max-width: 600px) {
+    li {
+        float: none;
+        width: 100%; /* 让每个<li>元素占满整个容器宽度 */
+    }
+}
+p{
+    size: 50px;
+    color: #0ebee2;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+#png{
+    
+    text-align: center;
+}
