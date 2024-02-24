@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>m3u8</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/hls.js/8.0.0-beta.3/hls.min.js"></script>
+    <style>
+        #str-post input[type="text"], #str-post button {
+         background: rgb(132, 156, 53);
+         border-radius: 15px 15px 15px 15px;
+         display: block;
+         margin: auto;
+         margin-bottom: 20px; /* 可以根据需要调整间距 */
+        }
+        *{
+            
+            background: rgb(255, 255, 255);
+            margin: 0;
+            padding: 0;
+        }
+        #player{
+            border-radius: 15px 15px 15px 15px;
+            width: 1200px;
+            height: 600px;
+            display: block;
+            margin: auto;
+        }
+        #input-div{
+            margin: auto;
+        }
+    </style>
+</head>
+<body>  
+    <video id="player" controls=""></video>
+    <div class="input-div">
+        <form method="post" id="str-post">
+            <input type="text" value="https://adultswim-vodlive.cdn.turner.com/live/rick-and-morty/stream_6.m3u8" name="url" placeholder="请输入m3u8播放地址" autocomplete="off">
+            <button type="submit">播放</button>
+        </form>
+        
+    </div>
+
+    <script>
+        function playM3u8(url){
+            if(Hls.isSupported()) {
+                var video = document.getElementById('player');
+                video.volume = 1.0;
+                var hls = new Hls();
+                var m3u8Url = decodeURIComponent(url)
+                hls.loadSource(m3u8Url);
+                hls.attachMedia(video);
+                hls.on(Hls.Events.MANIFEST_PARSED,function() {
+                    video.play();
+                });
+            }
+        }
+        $("#str-post").submit(function () {
+            $("html,body").animate({
+                scrollTop: $(".input-div").offset().top - 20
+            }, 200);
+            playM3u8($("#str-post").serializeArray()[0].value);
+            return false;
+        })
+    </script>
+</body>
+</html>
