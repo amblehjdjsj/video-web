@@ -7,31 +7,6 @@
     <link rel="stylesheet" href="main.css" />
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/hls.js/8.0.0-beta.3/hls.min.js"></script>
-    <style>
-        #str-post input[type="text"], #str-post button {
-         background: rgb(132, 156, 53);
-         border-radius: 15px 15px 15px 15px;
-         display: block;
-         margin: auto;
-         margin-bottom: 20px; /* 可以根据需要调整间距 */
-        }
-        *{
-            
-            background: rgb(255, 255, 255);
-            margin: 0;
-            padding: 0;
-        }
-        #player{
-            border-radius: 15px 15px 15px 15px;
-            width: 1200px;
-            height: 600px;
-            display: block;
-            margin: auto;
-        }
-        #input-div{
-            margin: auto;
-        }
-    </style>
 </head>
 <body>  
     <div class="box">
@@ -51,6 +26,10 @@
         </ul>
         </div>
         <div>
+        <div class="nav2" id="second">
+                <img alt="Rick and Morty" class="_1wRfZ" src="https://media.cdn.adultswim.com/uploads/20230927/239271336189-rick-and-morty-season-7-webHero-011401.png">
+        </div>
+        <div class="box2">
     <video id="player" controls=""></video>
     <div class="input-div">
         <form method="post" id="str-post">
@@ -58,6 +37,13 @@
             <button type="button" onclick="playM3u8('https://v.cdnlz9.com/20231016/19419_f520450f/2000k/hls/mixed.m3u8')">第一集</button>
             <button type="button" onclick="playM3u8('https://v.cdnlz9.com/20231023/19616_10678ba1/2000k/hls/mixed.m3u8')">第二集</button>
             <button type="button" onclick="playM3u8('https://v.cdnlz9.com/20231030/19785_c63ea65e/2000k/hls/mixed.m3u8')">第三集</button>
+            <button type="button" onclick="playM3u8('https://v.cdnlz9.com/20231106/19974_669ce2b6/2000k/hls/index.m3u8')">第四集</button>
+            <button type="button" onclick="playM3u8('https://v.cdnlz9.com/20231113/20152_49e3222f/2000k/hls/mixed.m3u8')">第五集</button>
+            <button type="button" onclick="playM3u8('https://v.cdnlz9.com/20231120/20313_3a3ca7ea/2000k/hls/mixed.m3u8')">第六集</button>
+            <button type="button" onclick="playM3u8('https://v.cdnlz9.com/20231127/20456_dfaff21a/2000k/hls/mixed.m3u8')">第七集</button>
+            <button type="button" onclick="playM3u8('https://v.cdnlz9.com/20231204/20604_91c9eae8/2000k/hls/mixed.m3u8')">第八集</button>
+            <button type="button" onclick="playM3u8('https://v.cdnlz9.com/20231211/20737_f966c963/2000k/hls/mixed.m3u8')">第九集</button>
+            <button type="button" onclick="playM3u8('https://s9.fsvod1.com/20231217/a1gqKpx5/2000kb/hls/index.m3u8')">第十集</button>
         </form>
         
     </div>

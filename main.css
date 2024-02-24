@@ -28,3 +28,34 @@ a:link,a:visited{ /*鼠标未点击和点击过时的样式*/
 a:hover{ /*鼠标移动到点击位时的样式，active指点击过后的样式*/
     background-color: #aa2842;
 }
+#str-post input[type="text"], #str-post button {
+    background: rgb(104, 211, 221);
+    border-radius: 15px 15px 15px 15px;
+    display: inline-block; /* 修改为横向显示 */
+    margin: auto;
+    width: 90px;
+    height: 40px;
+    margin-bottom: 10px; /* 可以根据需要调整间距 */
+    margin-right: 10px; /* 添加右边距以分隔按钮 */
+}   
+*{
+    
+    background: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+}
+#player{
+    border-radius: 15px 15px 15px 15px;
+    width: 1200px;
+    height: 600px;
+    display: block;
+    margin: auto;
+}
+#input-div{
+    margin: auto;
+    
+}
+#str-post{
+    text-align: center;
+    margin-top: 30px;
+}
