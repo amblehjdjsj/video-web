@@ -46,8 +46,8 @@ a:hover{ /*鼠标移动到点击位时的样式，active指点击过后的样式
 }
 #player{
     border-radius: 15px 15px 15px 15px;
-    width: 1200px;
-    height: 600px;
+    width: 100%;
+    height: auto;
     display: block;
     margin: auto;
 }
@@ -77,5 +77,13 @@ p{
     text-align: center;
 }
 #second{
+    width: 100%;
+    height: auto;
     text-align: center;
+}
+@media (min-width: 768px) {
+    #player {
+        width: 80%; /* 或者固定宽度，例如600px */
+        height: auto; /* 高度自适应 */
+    }
 }
